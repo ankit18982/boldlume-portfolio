@@ -13,19 +13,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Northstar Labs — Software that moves",
-  description: "An independent software studio building web platforms and mobile apps for ambitious teams.",
+  title: "Boldlume — Bright ideas. Boldly built.",
+  description: "A global software development agency building mobile apps, web platforms, SaaS products, custom software, and AI integrations.",
   metadataBase: new URL(process.env.SITE_URL ?? "http://localhost:3000"),
   openGraph: {
-    title: "Northstar Labs — Software that moves",
-    description: "Strategy, design, and engineering for ambitious teams.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Northstar Labs — We build digital products that move." }],
+    title: "Boldlume — Bright ideas. Boldly built.",
+    description: "Mobile, web, SaaS, custom software, and AI solutions for ambitious teams.",
+    images: [{ url: "/og-boldlume.png", width: 1200, height: 630, alt: "Boldlume — Bright ideas. Boldly built." }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Northstar Labs — Software that moves",
-    description: "Strategy, design, and engineering for ambitious teams.",
-    images: ["/og.png"],
+    title: "Boldlume — Bright ideas. Boldly built.",
+    description: "Mobile, web, SaaS, custom software, and AI solutions for ambitious teams.",
+    images: ["/og-boldlume.png"],
   },
   icons: {
     icon: "/favicon.svg",
