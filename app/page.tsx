@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { ArrowDown, ArrowRight, ArrowUpRight, Check, Menu, X } from "lucide-react";
 
 const services = [
@@ -19,6 +19,18 @@ const testimonials = [
 
 export default function Home() {
   const [open, setOpen] = useState(false);
+  const handleContact = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const subject = `New Boldlume Project Inquiry: ${data.get("project")}`;
+    const body = [
+      `Name: ${data.get("name")}`,
+      `Email: ${data.get("email")}`,
+      `Project: ${data.get("project")}`,
+      `Message: ${data.get("message")}`,
+    ].join("\n");
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=business@boldlume.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, "_blank", "noopener,noreferrer");
+  };
   return <main>
     <nav className="nav shell">
       <a className="brand" href="#top" aria-label="Boldlume home"><img src="boldlume-logo-tagline.png" alt="Boldlume — Bright ideas. Boldly built." /></a>
@@ -56,7 +68,7 @@ export default function Home() {
 
     <section className="process shell"><div className="section-head"><span>04 / How it works</span><h2>Clear from<br/>day one.</h2></div><div className="process-steps"><article><b>01</b><h3>Align</h3><p>Goals, users, constraints, and a focused plan.</p></article><article><b>02</b><h3>Make</h3><p>Weekly progress, real prototypes, frequent decisions.</p></article><article><b>03</b><h3>Launch</h3><p>Thorough testing, a clean release, and measured learning.</p></article><article><b>04</b><h3>Grow</h3><p>Support, iteration, and a product that keeps improving.</p></article></div></section>
 
-    <section className="contact" id="contact"><div className="shell"><div className="availability"><i/> Accepting new global projects</div><h2>Let’s make it<br/><em>matter.</em></h2><p>Tell us what you’re building, where you are today, and what success looks like. We’ll reply within two business days.</p><a href="mailto:business@boldlume.com?subject=New%20project%20inquiry">business@boldlume.com <ArrowUpRight/></a></div></section>
+    <section className="contact" id="contact"><div className="shell"><div className="availability"><i/> Accepting new global projects</div><div className="contact-layout"><div className="contact-intro"><h2>Let’s make it<br/><em>matter.</em></h2><p>Tell us what you’re building, where you are today, and what success looks like. We’ll reply within two business days.</p><a href="mailto:business@boldlume.com?subject=New%20project%20inquiry">business@boldlume.com <ArrowUpRight/></a><div className="contact-detail"><span>Based in India</span><span>Working worldwide</span><span>Remote-first collaboration</span></div></div><form className="contact-form" onSubmit={handleContact}><div className="form-row"><label><span>Your name</span><input type="text" name="name" placeholder="Alex Morgan" required /></label><label><span>Work email</span><input type="email" name="email" placeholder="alex@company.com" required /></label></div><label><span>What are you building?</span><input type="text" name="project" placeholder="SaaS platform, mobile app, AI workflow…" required /></label><label><span>Tell us about the project</span><textarea name="message" rows={6} placeholder="Your goals, current stage, timeline, and anything useful to know." required /></label><button type="submit">Start the conversation <ArrowUpRight size={19}/></button><small>Submitting opens a ready-to-send email draft addressed to Boldlume.</small></form></div></div></section>
     <footer className="footer shell"><a className="brand footer-brand" href="#top" aria-label="Boldlume home"><img src="boldlume-logo-tagline.png" alt="Boldlume — Bright ideas. Boldly built." /></a><p>© 2026 Boldlume. Bright ideas. Boldly built.</p><div><a href="mailto:business@boldlume.com">Email</a><a href="#work">Selected work</a><a href="#top">Back to top ↑</a></div></footer>
   </main>;
 }
