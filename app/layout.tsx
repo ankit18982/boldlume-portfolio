@@ -28,8 +28,9 @@ export const metadata: Metadata = {
     images: ["/boldlume-logo-tagline.png"],
   },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: [{ url: "/boldlume-favicon.png", type: "image/png", sizes: "512x512" }],
+    shortcut: "/boldlume-favicon.png",
+    apple: "/boldlume-favicon.png",
   },
 };
 
