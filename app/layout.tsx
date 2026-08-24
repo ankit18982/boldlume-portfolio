@@ -19,13 +19,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Boldlume — Bright ideas. Boldly built.",
     description: "Mobile, web, SaaS, custom software, and AI solutions for ambitious teams.",
-    images: [{ url: "/og-boldlume.png", width: 1200, height: 630, alt: "Boldlume — Bright ideas. Boldly built." }],
+    images: [{ url: "/boldlume-logo-tagline.png", width: 1719, height: 915, alt: "Boldlume — Bright ideas. Boldly built." }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Boldlume — Bright ideas. Boldly built.",
     description: "Mobile, web, SaaS, custom software, and AI solutions for ambitious teams.",
-    images: ["/og-boldlume.png"],
+    images: ["/boldlume-logo-tagline.png"],
   },
   icons: {
     icon: "/favicon.svg",
