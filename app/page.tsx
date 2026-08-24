@@ -21,7 +21,7 @@ export default function Home() {
   const [open, setOpen] = useState(false);
   return <main>
     <nav className="nav shell">
-      <a className="brand" href="#top" aria-label="Boldlume home"><img src="/boldlume-logo-tagline.png" alt="Boldlume — Bright ideas. Boldly built." /></a>
+      <a className="brand" href="#top" aria-label="Boldlume home"><img src="boldlume-logo-tagline.png" alt="Boldlume — Bright ideas. Boldly built." /></a>
       <div className={`nav-links ${open?"open":""}`}><a href="#work" onClick={()=>setOpen(false)}>Work</a><a href="#services" onClick={()=>setOpen(false)}>Services</a><a href="#about" onClick={()=>setOpen(false)}>About</a><a href="#contact" onClick={()=>setOpen(false)}>Contact</a></div>
       <a className="nav-cta" href="#contact">Start a project <ArrowUpRight size={16}/></a>
       <button className="menu" aria-label={open?"Close menu":"Open menu"} onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</button>
@@ -57,6 +57,6 @@ export default function Home() {
     <section className="process shell"><div className="section-head"><span>04 / How it works</span><h2>Clear from<br/>day one.</h2></div><div className="process-steps"><article><b>01</b><h3>Align</h3><p>Goals, users, constraints, and a focused plan.</p></article><article><b>02</b><h3>Make</h3><p>Weekly progress, real prototypes, frequent decisions.</p></article><article><b>03</b><h3>Launch</h3><p>Thorough testing, a clean release, and measured learning.</p></article><article><b>04</b><h3>Grow</h3><p>Support, iteration, and a product that keeps improving.</p></article></div></section>
 
     <section className="contact" id="contact"><div className="shell"><div className="availability"><i/> Accepting new global projects</div><h2>Let’s make it<br/><em>matter.</em></h2><p>Tell us what you’re building, where you are today, and what success looks like. We’ll reply within two business days.</p><a href="mailto:business@boldlume.com?subject=New%20project%20inquiry">business@boldlume.com <ArrowUpRight/></a></div></section>
-    <footer className="footer shell"><a className="brand footer-brand" href="#top" aria-label="Boldlume home"><img src="/boldlume-logo-tagline.png" alt="Boldlume — Bright ideas. Boldly built." /></a><p>© 2026 Boldlume. Bright ideas. Boldly built.</p><div><a href="mailto:business@boldlume.com">Email</a><a href="#work">Selected work</a><a href="#top">Back to top ↑</a></div></footer>
+    <footer className="footer shell"><a className="brand footer-brand" href="#top" aria-label="Boldlume home"><img src="boldlume-logo-tagline.png" alt="Boldlume — Bright ideas. Boldly built." /></a><p>© 2026 Boldlume. Bright ideas. Boldly built.</p><div><a href="mailto:business@boldlume.com">Email</a><a href="#work">Selected work</a><a href="#top">Back to top ↑</a></div></footer>
   </main>;
 }
